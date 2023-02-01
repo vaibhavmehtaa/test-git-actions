@@ -6,8 +6,8 @@ jobs:
   run-my-steps-here:
     runs-on: ubuntu-22.04
     steps:
-      - name: echo the relaese name
-        run:  echo /etc/os-release
+      - name: list the releases
+        run:  ls /etc/*release
       - name: multiline shell commands
         run: |
           node -v
