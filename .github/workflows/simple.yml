@@ -1,0 +1,19 @@
+name: shell commands 
+
+on: [push] 
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: echo the relaese name
+        run:  echo /etc/os-release
+      - name: multiline shell commands
+        run: |
+          node -v
+          npm -v
+
+          
+
+
+
