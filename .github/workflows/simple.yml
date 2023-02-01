@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: list the releases
         run:  ls /etc/*release
+      - name: name the releases
+        run: cat /etc/os-release
       - name: multiline shell commands
         run: |
           node -v
