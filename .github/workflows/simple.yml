@@ -3,7 +3,7 @@ name: my first git actions commands
 on: [push] 
 
 jobs:
-  run-my-steps:
+  run-my-steps-here:
     runs-on: ubuntu-22.04
     steps:
       - name: echo the relaese name
