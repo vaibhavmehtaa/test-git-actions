@@ -1,6 +1,9 @@
 name: Action sample workflow 
 
 on: 
+  push:
+    branches:
+      - "main"
   repository_dispatch:
     types: [build]
 
