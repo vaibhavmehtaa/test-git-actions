@@ -1,0 +1,17 @@
+name: Action sample workflow 
+
+on: 
+  repository_dispatch:
+    types: [build]
+
+jobs:
+  dry-run-js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS aciton
+        uses: actions/javascript-action@main
+        with:
+          greet: morning
+          
+      - name: log greet time
+        run: echo
