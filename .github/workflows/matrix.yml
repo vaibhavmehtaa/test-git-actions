@@ -7,9 +7,10 @@ jobs:
     strategy:
       matrix: 
         node_version: [8,6,7]
+        os: ["ubuntu-latest", "window-latest", "macos-latest"]
       fail-fast: true
       max-parallel: 3
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: log node version
         run: node -v
