@@ -4,12 +4,19 @@ on: [push]
 
 jobs:
   node-playground:
+    strategy:
+      matrix: 
+        node_version: [8,6,7]
+      fail-fast: true
+      max-parallel: 3
     runs-on: ubuntu-latest
     steps:
       - name: log node version
         run: node -v
       - uses: actions/setup-node@v3
         with:
-          node-version: 6
+          node-version: ${{ matrix.node_version }}
       - name: log node version
-        run: node -v
+        run: node -v 
+
+
